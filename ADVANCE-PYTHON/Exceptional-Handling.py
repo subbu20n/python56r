@@ -139,13 +139,52 @@ finally:
 # 6.custom exception
 
 
-try: 
-    a = int(input('enter num1'))
-    b = int(input('enter num2')) 
+# try: 
+#     a = int(input('enter num1'))
+#     b = int(input('enter num2')) 
 
-    if b<0:  
-        raise ValueError ("b cannot be negative")  # manually raising the exception 
+#     if b<0:  
+#         raise ValueError ("b cannot be negative")  # manually raising the exception 
+# except Exception as e: 
+#     #logging 
+#     print('ValueError:' ,e)          
+
+
+
+# # custom Exceptions 
+
+# class MyException(Exception): 
+#     pass 
+
+# try: 
+#     a = int(input('enter num1'))
+#     b = int(input('enter num2'))
+
+#     if b<0: 
+#         raise MyException('b cannot be  negative number') 
+# except Exception as e: 
+#     print(e)    
+
+
+
+# # Nested Exception 
+
+# try: 
+#     a = int(input('enter num1')) 
+#     try: 
+#         b = int(input('enter num2')) 
+#     except Exception as e:   # here will stop function 'if neagtive number enters '
+#         print(e) 
+# except Exception as e: 
+#     print(e)
+
+
+try: 
+    a = int(input('enter num1')) 
+    try: 
+        b = int(input('enter num2')) 
+    except Exception as e: 
+        print(e) 
+        raise    # here we raised exception then it move to outer query o k
 except Exception as e: 
-    #logging 
-    print('ValueError:' ,e)          
-      
+    print(str(e) + 'this is from outer query' )       
