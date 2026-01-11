@@ -17,12 +17,12 @@
 #     host = "locallost", 
 #     user = "root", 
 #     password = "your_password" 
-#     database  = "56r"  #database name   
+#     database  = "56r"  #database name  
 # )
 
 # cursor.conn.cursor() 
 # cursor.execute()  
- 
+
 # cursor -- will help to execute queries 
 
 # keyword/Method              Meaning 

@@ -244,3 +244,24 @@
 # #Inverse 
 # inv = np.linalg.inv(A) 
 # print(inv)
+
+# -----------------broadcasting-------------- 
+import numpy as np 
+arr1 = np.array([1,2,3]) 
+arr2 = np.array([[10],[20],[30]])   
+# broadcastion the operation 
+# rows are less it increses the no. of rows 
+# columns are less it increases the no. of columns ok 
+result = arr1 + arr2 
+print(result) 
+
+# -------Advanced Indexing -----------------
+
+import numpy as np 
+arr = np.array([[1,2,3],[4,5,6],[7,8,9]]) 
+# selecting rows and columns using fancy indexing  
+print(arr[0,2],[1,2]) 
+
+#print(arr[0][1],[2,2]) 
+#print(arr[0:2][1:2]) 
+# print(arr[:],[1:2]) 
